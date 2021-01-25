@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,800");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-weight: 400;
+  user-select: none;
+}
+
+body,
+html,
+main {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+body {
+  background-color: #afafaf;
+  color: #333;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+.center-width {
+  position: relative;
+  width: 90%;
+  max-width: 1480px;
+  margin: 0px auto;
+}
+
+nav {
+  background-color: #333;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+}
+nav .center-width {
+  position: relative;
+  width: 95%;
+  max-width: 1600px;
+  margin: 0px auto;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+nav .btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #1b6c9f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  text-align: center;
+}
+nav .btn.btn_reset {
+  color: #1b6c9f;
+  background-color: #fff;
+}
+nav .btn.btn_reset:active {
+  background-color: #1b6c9f !important;
+  color: #fff;
+}
+nav .btn.btn_rotate_l {
+  transform: scaleX(-1);
+}
+nav .btn:active {
+  color: #1b6c9f;
+  background-color: #fff;
+}
+nav .speak_zone {
+  display: flex;
+  flex-grow: 0.5;
+}
+nav .speak_zone .btn.btn_speak {
+  width: 30%;
+  margin: 0px;
+}
+nav .speak_zone input {
+  margin: 0px;
+  width: 70%;
+  height: auto;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+  padding: 5px;
+}
+nav .speak_zone .btn_speak {
+  border-radius: 0px 5px 5px 0px;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.1;
+  text-align: center;
+}
+header h1 {
+  font-size: 10vw;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0px;
+  line-height: 9vw;
+}
+header .light {
+  font-weight: 400;
+  font-size: 5vw;
+  font-style: "italic";
+}
+header .tight {
+  letter-spacing: 0vw;
+}
+header h2 {
+  font-size: 4vw;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.cube {
+  transform: all 1s;
+  position: absolute;
+  background-color: #1b6c9f;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-weight: 400;
+  z-index: 5;
+}
+.cube h2 {
+  font-size: 32px;
+  margin: 0px;
+  line-height: 90%;
+  color: #fff;
+  text-transform: uppercase;
+}
+.cube p {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  background-color: #fff;
+  font-size: 12px;
+  margin: 0px;
+  color: #1b6c9f;
+  padding: 10px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+/*  #tablet (Portrait)
+================================================== */
+@media only screen and (max-width: 959px) {
+  nav .center-width {
+    width: 94%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .btn {
+    font-size: 16px;
+    width: 24%;
+    margin-right: 0px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  nav .speak_zone {
+    flex-grow: 0.975;
+    font-size: 16px;
+    display: flex;
+    align-self: flex-start;
+    margin: 0;
+  }
+  nav .speak_zone input {
+    width: 70%;
+  }
+  nav .speak_zone .btn.btn_speak {
+    position: relative;
+    width: 30%;
+  }
+}
